@@ -1,0 +1,7 @@
+{
+  "name": "ZelioNFCUI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
