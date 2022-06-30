@@ -1,21 +1,127 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ folder }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content [fullscreen]="true">
+  <ion-segment [(ngModel)]="selectedSegmant" scrollable>
+    <!-- <ion-segment #folderSegment (ionChange)="segmentChanged($event)" value="settings" scrollable> -->
+    <ion-segment-button value="settings">
+      <ion-label>SETTINGS</ion-label>
+    </ion-segment-button>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-segment-button value="diagnose">
+      <ion-label>DIAGNOSE</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="protection">
+      <ion-label>PROTECTION</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="basic-setting">
+      <ion-label>BASIC SETTING</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="user-alam">
+      <ion-label>USER ALAM</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="R1">
+      <ion-label>R1(11-12-14)</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="R2">
+      <ion-label>R2(21-22-24)</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+<div *ngIf="selectedSegmant == 'settings'">
+  <app-settings>
+</app-settings>
+</div>
+<div *ngIf="selectedSegmant == 'diagnose'">
+  <app-diagnose-tab>
+  </app-diagnose-tab>
+</div>
+<div *ngIf="selectedSegmant == 'protection'">
+  <app-protection-tab>
+  </app-protection-tab>
+</div>
+<div *ngIf="selectedSegmant == 'basic-setting'">
+  <app-basic-setting>
+  </app-basic-setting>
+</div>
 </ion-content>
+
+
+
+
+
+  <!-- <div [ngSwitch]="segment">
+    <ion-card *ngSwitchCase="'SETTINGS'">
+      <ion-card-header>
+        SETTINGS Content
+      </ion-card-header>
+      <ion-card-content>
+        SETTINGS Content here
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'DIAGNOSE'">
+      <ion-card-header>
+        DIAGNOSE Content
+      </ion-card-header>
+      <ion-card-content>
+        DIAGNOSE Content here
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'PROTECTION'">
+      <ion-card-header>
+        PROTECTION Content
+      </ion-card-header>
+      <ion-card-content>
+        PROTECTION Content here
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'BASIC_SETTING'">
+      <ion-card-header>
+        BASIC_SETTING Content
+      </ion-card-header>
+      <ion-card-content>
+        BASIC_SETTING Content here
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'USER_ALAM'">
+      <ion-card-header>
+        USER_ALAM Content
+      </ion-card-header>
+      <ion-card-content>
+        USER_ALAM Content here
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'R1'">
+      <ion-card-header>
+        R1 Content
+      </ion-card-header>
+      <ion-card-content>
+        R1 Content here
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'R2'">
+      <ion-card-header>
+        R2 Content
+      </ion-card-header>
+      <ion-card-content>
+        R2 Content here
+      </ion-card-content>
+    </ion-card>
+
+  </div> -->

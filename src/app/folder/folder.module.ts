@@ -7,6 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
+import { BasicSettingComponent } from './basic-setting/basic-setting.component';
+import { SettingsComponent } from './settings/settings.component';
+import { DiagnoseTabComponent } from './diagnose-tab/diagnose-tab.component';
+import { ProtectionTabComponent } from './protection-tab/protection-tab.component';
 
 @NgModule({
   imports: [
@@ -15,6 +19,6 @@ import { FolderPage } from './folder.page';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [FolderPage,BasicSettingComponent,SettingsComponent,DiagnoseTabComponent,ProtectionTabComponent]
 })
 export class FolderPageModule {}
