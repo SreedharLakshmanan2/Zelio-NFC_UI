@@ -1,11 +1,13 @@
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-icon name="notifications-outline"></ion-icon>
-    </ion-col>
-    <ion-col>
-      <h3>Alam1 Under voltage alam</h3>
-      <h1>(UV < 350 v, Under voltage alam)</h1>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<ion-card *ngFor="let item of lists">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <h3>Alam1 Under voltage alam</h3>
+        <h5>(UV < 350 v, Under voltage alam)</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
