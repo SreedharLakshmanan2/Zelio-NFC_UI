@@ -1,5 +1,9 @@
 <ion-card>
-  <ion-card-content>
+  <ion-card-content text-center>
+    <ion-item lines="none">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+    </ion-item>
+    <br>
     <ion-item color="light">
       <ion-input placeholder="LOCK RELAY"></ion-input>
     </ion-item>
@@ -25,3 +29,8 @@
 
   </ion-card-content>
 </ion-card>
+<div class="buttonClass">
+  <ion-button color="light" expand="full" (click)="clickHere()">
+    Read
+  </ion-button>
+</div>
