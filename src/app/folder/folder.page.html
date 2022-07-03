@@ -3,13 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>{{ selectedSegmant }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
   <ion-content [fullscreen]="true">
   <ion-segment [(ngModel)]="selectedSegmant" scrollable>
-    <!-- <ion-segment #folderSegment (ionChange)="segmentChanged($event)" value="settings" scrollable> -->
     <ion-segment-button value="settings">
       <ion-label>SETTINGS</ion-label>
     </ion-segment-button>
@@ -38,6 +37,7 @@
       <ion-label>R2(21-22-24)</ion-label>
     </ion-segment-button>
   </ion-segment>
+  <ion-list>
 <div *ngIf="selectedSegmant == 'settings'">
   <app-settings>
 </app-settings>
@@ -58,4 +58,45 @@
   <app-user-alam>
   </app-user-alam>
 </div>
+</ion-list>
 </ion-content>
+
+<ion-footer class="buttonClass">
+  <div *ngIf="selectedSegmant == 'diagnose'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light">
+            History
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light">
+            Tripping Condition
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="light">
+          Read
+        </ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button color="light">
+          Write
+        </ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button color="light">
+          Clone
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

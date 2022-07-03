@@ -6,16 +6,14 @@
     </ion-card-content>
   </ion-card>
   <br>
-  <ion-list class="gridClass">
+  <div class="gridClass">
     <ion-grid>
       <!-- Power Supply -->
       <ion-row>
         <ion-col>
           <ion-card>
             <ion-item>
-              <ion-avatar>
                 <ion-icon name="flash-outline"></ion-icon>
-              </ion-avatar>
               <ion-label>
                 <p>
                   Power Supply
@@ -28,13 +26,11 @@
             </ion-item>
           </ion-card>
         </ion-col>
-<!-- External Control -->
+        <!-- External Control -->
         <ion-col>
           <ion-card>
             <ion-item>
-              <ion-avatar>
-                <ion-icon name="flash-outline"></ion-icon>
-              </ion-avatar>
+              <ion-icon name="flash-outline"></ion-icon>
               <ion-label>
                 <p>
                   External Control
@@ -48,14 +44,14 @@
           </ion-card>
         </ion-col>
       </ion-row>
-<!-- Output Status1 -->
+    </ion-grid>
+    <!-- Output Status1 -->
+    <ion-grid>
       <ion-row>
         <ion-col>
           <ion-card>
             <ion-item>
-              <ion-avatar>
-                <ion-icon name="flash-outline"></ion-icon>
-              </ion-avatar>
+              <ion-icon name="flash-outline"></ion-icon>
               <ion-label>
                 <h4>
                   Output Status1
@@ -68,13 +64,11 @@
             </ion-item>
           </ion-card>
         </ion-col>
-<!-- Output Status1 -->
+        <!-- Output Status1 -->
         <ion-col>
           <ion-card>
             <ion-item>
-              <ion-avatar>
                 <ion-icon name="flash-outline"></ion-icon>
-              </ion-avatar>
               <ion-label>
                 <h4>
                   Output Status2
@@ -90,25 +84,5 @@
       </ion-row>
     </ion-grid>
 
-  </ion-list>
-  <div class="buttonClass">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-button color="light">
-            History
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button color="light">
-            Tripping Condition
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-button color="light" expand="full" (click)="clickHere()">
-      Read
-    </ion-button>
   </div>
-
 </div>
