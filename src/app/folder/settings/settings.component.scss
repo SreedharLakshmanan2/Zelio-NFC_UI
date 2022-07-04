@@ -1,14 +1,26 @@
-.buttonClass{
+.buttonClass {
     position: fixed;
     left: 0;
     bottom: 0px;
     right: 0;
     justify-content: space-evenly;
 }
+
 ion-grid {
-display: flex;
-justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
-.contentClass{
+
+.contentClass {
     background-color: var(--ion-color-light-tint);
+}
+
+.ion-list {
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 250px;
+    background-color: var(--ion-color-light-tint);
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
