@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { DiagnoseTabComponent } from './diagnose-tab/diagnose-tab.component';
 import { ProtectionTabComponent } from './protection-tab/protection-tab.component';
 import { UserAlamComponent } from './user-alam/user-alam.component';
+import { R1Component } from './r1/r1.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import { UserAlamComponent } from './user-alam/user-alam.component';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage,BasicSettingComponent,SettingsComponent,DiagnoseTabComponent,ProtectionTabComponent,UserAlamComponent]
+  declarations: [FolderPage,BasicSettingComponent,SettingsComponent,DiagnoseTabComponent,ProtectionTabComponent,UserAlamComponent,R1Component]
 })
 export class FolderPageModule {}

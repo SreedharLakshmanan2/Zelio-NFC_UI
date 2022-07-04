@@ -58,10 +58,15 @@
   <app-user-alam>
   </app-user-alam>
 </div>
+<div *ngIf="selectedSegmant == 'R1'">
+  <app-r1>
+  </app-r1>
+</div>
 </ion-list>
 </ion-content>
 
 <ion-footer class="buttonClass">
+  <!-- Diagnose Footer -->
   <div *ngIf="selectedSegmant == 'diagnose'">
     <ion-grid>
       <ion-row>
@@ -78,25 +83,46 @@
       </ion-row>
     </ion-grid>
   </div>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button color="light">
-          Read
-        </ion-button>
-      </ion-col>
+<!-- R1 Footer-->
+  <div *ngIf="selectedSegmant == 'R1'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light">
+            SIMULATION
+          </ion-button>
+        </ion-col>
+  
+        <ion-col>
+          <ion-button color="light">
+            COPY TO 21-22-24
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-      <ion-col>
-        <ion-button color="light">
-          Write
-        </ion-button>
-      </ion-col>
-
-      <ion-col>
-        <ion-button color="light">
-          Clone
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div *ngIf="selectedSegmant == 'settings'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light">
+            Read
+          </ion-button>
+        </ion-col>
+  
+        <ion-col>
+          <ion-button color="light">
+            Write
+          </ion-button>
+        </ion-col>
+  
+        <ion-col>
+          <ion-button color="light">
+            Clone
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-footer>
