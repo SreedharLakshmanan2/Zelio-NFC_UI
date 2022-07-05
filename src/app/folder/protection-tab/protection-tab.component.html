@@ -4,28 +4,20 @@
       <ion-icon name="lock-closed-outline"></ion-icon>
     </ion-item>
     <br>
-    <ion-item color="light">
-      <ion-input placeholder="LOCK RELAY"></ion-input>
-    </ion-item>
+    <ion-button expand="block" color="light">LOCK RELAY</ion-button>
     <br>
-    <ion-item color="light">
-      <ion-input placeholder="CHANGE RELAY PASSWORD"></ion-input>
-    </ion-item>
+    <ion-button expand="block" color="light">CHANGE RELAY PASSWORD</ion-button>
     <br>
-    <ion-item color="light">
-      <ion-input placeholder="RESET RELAY PASSWORD"></ion-input>
-    </ion-item>
+    <ion-button expand="block" color="light">RESET RELAY PASSWORD</ion-button>
     <br>
-    <ion-item>
+    <ion-item lines="none">
       Check available Reset(s)
     </ion-item>
-
-    <ion-item class="clickHere">
+    <ion-item lines="none">
       <ion-label>
         To purchase reset relay password(s).
+        <div style="text-decoration: underline;" (click)="clickHere()">click here</div>
       </ion-label>
-      <div style="text-decoration: underline;" (click)="clickHere()">click here</div>
     </ion-item>
-
   </ion-card-content>
 </ion-card>

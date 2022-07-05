@@ -9,10 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 export class FolderPage implements OnInit {
   public folder: string;
 selectedSegmant = 'settings'
+moreInfoOverlayHidden: boolean = true;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
-
+  moreInfo(){
+    console.log('moreInfo')
+  }
+  public hideMoreInfoOverlay() {
+    this.moreInfoOverlayHidden = true;
+}
+public showMoreInfoOverlay() {
+  this.moreInfoOverlayHidden = false;
+}
 }
