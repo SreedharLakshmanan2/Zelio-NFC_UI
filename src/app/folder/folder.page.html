@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-  <ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true">
   <ion-segment [(ngModel)]="selectedSegmant" scrollable>
     <ion-segment-button value="settings">
       <ion-label>SETTINGS</ion-label>
@@ -38,31 +38,31 @@
     </ion-segment-button>
   </ion-segment>
   <ion-list>
-<div *ngIf="selectedSegmant == 'settings'">
-  <app-settings>
-</app-settings>
-</div>
-<div *ngIf="selectedSegmant == 'diagnose'">
-  <app-diagnose-tab>
-  </app-diagnose-tab>
-</div>
-<div *ngIf="selectedSegmant == 'protection'">
-  <app-protection-tab>
-  </app-protection-tab>
-</div>
-<div *ngIf="selectedSegmant == 'basic-setting'">
-  <app-basic-setting>
-  </app-basic-setting>
-</div>
-<div *ngIf="selectedSegmant == 'user-alam'">
-  <app-user-alam>
-  </app-user-alam>
-</div>
-<div *ngIf="selectedSegmant == 'R1'">
-  <app-r1>
-  </app-r1>
-</div>
-</ion-list>
+    <div *ngIf="selectedSegmant == 'settings'">
+      <app-settings>
+      </app-settings>
+    </div>
+    <div *ngIf="selectedSegmant == 'diagnose'">
+      <app-diagnose-tab>
+      </app-diagnose-tab>
+    </div>
+    <div *ngIf="selectedSegmant == 'protection'">
+      <app-protection-tab>
+      </app-protection-tab>
+    </div>
+    <div *ngIf="selectedSegmant == 'basic-setting'">
+      <app-basic-setting>
+      </app-basic-setting>
+    </div>
+    <div *ngIf="selectedSegmant == 'user-alam'">
+      <app-user-alam>
+      </app-user-alam>
+    </div>
+    <div *ngIf="selectedSegmant == 'R1'">
+      <app-r1>
+      </app-r1>
+    </div>
+  </ion-list>
 </ion-content>
 
 <ion-footer class="buttonClass">
@@ -72,18 +72,20 @@
       <ion-row>
         <ion-col>
           <ion-button color="light">
-            History
+            Read
           </ion-button>
         </ion-col>
+        <!-- Spacer -->
+        <ion-col style="width: 50px"></ion-col>
         <ion-col>
           <ion-button color="light">
-            Tripping Condition
+            Write
           </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
-<!-- R1 Footer-->
+  <!-- R1 Footer-->
   <div *ngIf="selectedSegmant == 'R1'">
     <ion-grid>
       <ion-row>
@@ -92,7 +94,7 @@
             SIMULATION
           </ion-button>
         </ion-col>
-  
+        <ion-col style="width: 50px"></ion-col>
         <ion-col>
           <ion-button color="light">
             COPY TO 21-22-24
@@ -110,13 +112,15 @@
             Read
           </ion-button>
         </ion-col>
-  
+        <!-- Spacer -->
+        <ion-col style="width: 50px"></ion-col>
         <ion-col>
           <ion-button color="light">
             Write
           </ion-button>
         </ion-col>
-  
+        <!-- Spacer -->
+        <ion-col style="width: 50px"></ion-col>
         <ion-col>
           <ion-button color="light">
             Clone

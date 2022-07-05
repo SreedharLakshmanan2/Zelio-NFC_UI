@@ -1,33 +1,39 @@
 <div class="contentClass">
   <!-- Control Signal -->
-  <br>  
-  <ion-card>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-list class="ion-list">
-            <ion-item *ngFor="let item of lists">
-              <h2>{{item}}</h2>
-            </ion-item>
-          </ion-list>
-        </ion-col>
-
-        <ion-col>
-          
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-      
-  </ion-card>
   <br>
-  <!-- Instant Control -->
+  <ion-card>
+    <ion-item>
+      <!-- <ion-list class="ion-list">
+        <ion-item *ngFor="let item of lists">
+          <ion-label>{{item}}</ion-label>
+        </ion-item>
+      </ion-list> -->
+      <ion-list class="ion-list">     
+        <ion-item *ngFor="let item of lists">   
+                <ion-label>{{item}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-button (click)="openPicker()">{{selectedSignal}}</ion-button>
+      <ion-icon name="business-outline" class="iconClass" (click)="onClick()"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+    <ion-slides pager>
+      <ion-slide *ngFor="let item of lists">
+        <ion-item>
+          <ion-icon name="business-outline" class="iconClass"></ion-icon>
+        </ion-item>
+      </ion-slide>
+    </ion-slides>
+    
+  <br>
   <ion-card>
     <ion-card-content>
       <ion-item lines="none">
         <ion-label>
           Instant Control
         </ion-label>
-        <ion-toggle color="danger"></ion-toggle>
+        <ion-toggle color="danger"  checked=true></ion-toggle>
       </ion-item>
     </ion-card-content>
   </ion-card>
@@ -52,4 +58,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-row style="height: 200px"></ion-row>
 </div>

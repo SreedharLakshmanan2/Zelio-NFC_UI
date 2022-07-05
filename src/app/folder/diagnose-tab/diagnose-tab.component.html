@@ -1,18 +1,24 @@
 <div class="contentClass">
   <br>
-  <ion-item>
-    <ion-label>
-      Diagnose
-    </ion-label>
-    <ion-toggle color="danger">
-    </ion-toggle>
+  <!-- Diagnose toggle -->
+  <ion-item color="light" >
+    <ion-item slot="end" color="light">
+      <ion-label>
+        Diagnose
+      </ion-label>
+        <ion-toggle color="danger" checked=true>
+        </ion-toggle>
+    </ion-item>
   </ion-item>
-  <ion-card>
-    <ion-card-content>
-      Please READ from the relay to load the Diagnose data
-    </ion-card-content>
-  </ion-card>
   <br>
+<!-- Time Status -->
+<ion-card>
+  <ion-item lines="none">
+      <ion-icon name="timer-outline"></ion-icon>
+      Timer Status
+  </ion-item>
+  <ion-row style="height: 100px"></ion-row>
+</ion-card>
   <div class="gridClass">
     <ion-grid>
       <!-- Power Supply -->
@@ -28,7 +34,7 @@
                 <h3>
                   A1-A2
                 </h3>
-                <ion-toggle color="danger"></ion-toggle>
+                <ion-toggle color="danger"  checked=true></ion-toggle>
               </ion-label>
             </ion-item>
           </ion-card>
@@ -45,7 +51,7 @@
                 <h3>
                   Y1
                 </h3>
-                <ion-toggle color="danger"></ion-toggle>
+                <ion-toggle color="danger"  checked=true></ion-toggle>
               </ion-label>
             </ion-item>
           </ion-card>
@@ -66,7 +72,7 @@
                 <h3>
                   15-16-18
                 </h3>
-                <ion-toggle color="danger"></ion-toggle>
+                <ion-toggle color="danger"  checked=true></ion-toggle>
               </ion-label>
             </ion-item>
           </ion-card>
@@ -83,7 +89,7 @@
                 <h3>
                   25-26-28
                 </h3>
-                <ion-toggle color="danger"></ion-toggle>
+                <ion-toggle color="danger"  checked=true></ion-toggle>
               </ion-label>
             </ion-item>
           </ion-card>
@@ -92,4 +98,5 @@
     </ion-grid>
 
   </div>
+  <ion-row style="height: 300px"></ion-row>
 </div>
