@@ -9,6 +9,7 @@ import { PickerController } from '@ionic/angular';
 export class SettingsComponent implements OnInit { 
   selectedSignal = 'A-AT'
  lists: Array<string> = ["A",'AB','AC','AD','B-Ht','L-Lt']
+ moreInfoOverlayHidden: boolean = true;
   constructor(private pickerCtrl: PickerController) { }
 
   ngOnInit() {}
@@ -124,4 +125,12 @@ console.log('Success')
 
     await picker.present();
   }
+
+  public hideMoreInfoOverlay() {
+    this.moreInfoOverlayHidden = true;
+}
+public showMoreInfoOverlay() {
+  this.moreInfoOverlayHidden = false;
+}
+
 }

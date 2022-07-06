@@ -15,9 +15,7 @@ moreInfoOverlayHidden: boolean = true;
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
-  moreInfo(){
-    console.log('moreInfo')
-  }
+ 
   public hideMoreInfoOverlay() {
     this.moreInfoOverlayHidden = true;
 }

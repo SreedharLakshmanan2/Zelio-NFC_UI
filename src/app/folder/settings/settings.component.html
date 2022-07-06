@@ -1,60 +1,38 @@
 <div class="contentClass">
+  <ion-row></ion-row>
   <!-- Control Signal -->
-  <br>
-  <ion-card>
+  <!-- <ion-card>
     <ion-item>
-      <!-- <ion-list class="ion-list">
-        <ion-item *ngFor="let item of lists">
-          <ion-label>{{item}}</ion-label>
-        </ion-item>
-      </ion-list> -->
       <ion-list class="ion-list">     
         <ion-item *ngFor="let item of lists">   
                 <ion-label>{{item}}</ion-label>
         </ion-item>
       </ion-list>
       <ion-button (click)="openPicker()">{{selectedSignal}}</ion-button>
-      <ion-icon name="business-outline" class="iconClass" (click)="onClick()"></ion-icon>
+      <ion-icon name="business-outline" class="iconClass" (click)="showMoreInfoOverlay()"></ion-icon>
     </ion-item>
-  </ion-card>
+  </ion-card> -->
 
-    <!-- <ion-slides pager>
-      <ion-slide *ngFor="let item of lists">
-        <ion-item>
-          <ion-icon name="business-outline" class="iconClass"></ion-icon>
-        </ion-item>
-      </ion-slide>
-    </ion-slides> -->
-    
-  <br>
+  <!-- Instant Control -->
   <ion-card>
-    <ion-card-content>
       <ion-item lines="none">
         <ion-label>
-          Instant Control
+          <h1>Instant Control</h1>
         </ion-label>
         <ion-toggle color="danger"  checked=true></ion-toggle>
       </ion-item>
-    </ion-card-content>
   </ion-card>
-  <br>
+
   <!-- Timer -->
-  <ion-grid>
     <ion-row>
-      <ion-col>
         <ion-card>
           <ion-card-content>
-            <ion-item lines="none">
               <ion-label>
-                <h2>T(hr:min:sec:msec)</h2>
+                <h1>T(hr:min:sec:msec)</h1>
                 <h2>0000:00:03:0000</h2>
               </ion-label>
-            </ion-item>
           </ion-card-content>
         </ion-card>
-      </ion-col>
-      <ion-col style="width: 200px"></ion-col>
     </ion-row>
-  </ion-grid>
-  <ion-row style="height: 200px"></ion-row>
+    <ion-col></ion-col>
 </div>

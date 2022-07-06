@@ -54,9 +54,12 @@ ion-grid {
 
 .my-overlay {
   position: fixed;
-  width: 200px;
-  height: 100px;
+  width: 250px;
   background: --ion-color-light-shade;
   top: 50px;
-  right: 20px;
+  right: 10px;
+}
+
+.contentClass {
+  background-color: var(--ion-color-light-tint);
 }

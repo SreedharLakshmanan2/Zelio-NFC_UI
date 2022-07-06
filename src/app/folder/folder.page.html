@@ -71,13 +71,16 @@
 <div class="my-overlay" padding [hidden]="moreInfoOverlayHidden">
   <ion-card padding (click)="hideMoreInfoOverlay()">
     <ion-list>
-      <!-- <ion-card-content> -->
         <h3> Rename relay </h3>
+        <br>
         <h3> Save relay settings </h3>
+        <br>
         <h3> Saved settings </h3>
+        <br>
         <h3> Received settings </h3>
+        <br>
         <h3> Share settings(File) </h3>
-      <!-- </ion-card-content> -->
+        <br>
     </ion-list>
   </ion-card>
 </div>
@@ -119,6 +122,10 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+  </div>
+
+  <div *ngIf="selectedSegmant == 'protection'">
+    <ion-button expand="block" color="light">Read</ion-button>
   </div>
 
   <div *ngIf="selectedSegmant == 'settings'">
